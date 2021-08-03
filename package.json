@@ -1,0 +1,25 @@
+{
+  "name": "cypress81",
+  "version": "1.0.0",
+  "description": "cypress automation with 8.1.0 version",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Urmila487/cypress81withReport.git"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "Urmila Vadi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Urmila487/cypress81withReport/issues"
+  },
+  "homepage": "https://github.com/Urmila487/cypress81withReport#readme",
+  "devDependencies": {
+    "cypress": "^8.1.0"
+  }
+}
