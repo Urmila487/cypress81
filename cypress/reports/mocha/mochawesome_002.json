@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2021-08-03T10:18:25.484Z",
-    "end": "2021-08-03T10:18:29.596Z",
-    "duration": 4112,
+    "start": "2021-08-03T14:00:55.746Z",
+    "end": "2021-08-03T14:01:00.677Z",
+    "duration": 4931,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "d1c12f91-3654-4bea-bf68-0a946e1387f9",
+      "uuid": "0106d8b8-c724-4c2e-b76a-07e166975a55",
       "title": "",
       "fullFile": "cypress/integration/2-advanced-examples/aliasing.spec.js",
       "file": "cypress/integration/2-advanced-examples/aliasing.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "689b4242-628f-4356-b8a0-8bb172d79b8e",
+          "uuid": "48388a01-b691-4517-ab36-30104173cb9e",
           "title": "Aliasing",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": ".as() - alias a DOM element for later use",
               "fullTitle": "Aliasing .as() - alias a DOM element for later use",
               "timedOut": null,
-              "duration": 851,
+              "duration": 938,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": "\"videos/2-advanced-examples/aliasing.spec.js.mp4\"",
               "code": "// https://on.cypress.io/as\n// Alias a DOM element for use later\n// We don't have to traverse to the element\n// later in our code, we reference it with @\ncy.get('.as-table').find('tbody>tr').first().find('td').first().find('button').as('firstBtn'); // when we reference the alias, we place an\n// @ in front of its name\ncy.get('@firstBtn').click();\ncy.get('@firstBtn').should('have.class', 'btn-success').and('contain', 'Changed');",
               "err": {},
-              "uuid": "1852673b-d686-4c94-bfbf-07be1eb4d8e1",
-              "parentUUID": "689b4242-628f-4356-b8a0-8bb172d79b8e",
+              "uuid": "b6e460ae-04da-4af6-8660-eac8043732bd",
+              "parentUUID": "48388a01-b691-4517-ab36-30104173cb9e",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": ".as() - alias a route for later use",
               "fullTitle": "Aliasing .as() - alias a route for later use",
               "timedOut": null,
-              "duration": 1194,
+              "duration": 1871,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": "\"videos/2-advanced-examples/aliasing.spec.js.mp4\"",
               "code": "// Alias the route to wait for its response\ncy.intercept('GET', '**/comments/*').as('getComment'); // we have code that gets a comment when\n// the button is clicked in scripts.js\ncy.get('.network-btn').click(); // https://on.cypress.io/wait\ncy.wait('@getComment').its('response.statusCode').should('eq', 200);",
               "err": {},
-              "uuid": "d2aba319-fff6-4500-a49e-0af9397f0ac2",
-              "parentUUID": "689b4242-628f-4356-b8a0-8bb172d79b8e",
+              "uuid": "134b7774-e112-44f4-9c37-f75146ad42eb",
+              "parentUUID": "48388a01-b691-4517-ab36-30104173cb9e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "1852673b-d686-4c94-bfbf-07be1eb4d8e1",
-            "d2aba319-fff6-4500-a49e-0af9397f0ac2"
+            "b6e460ae-04da-4af6-8660-eac8043732bd",
+            "134b7774-e112-44f4-9c37-f75146ad42eb"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2045,
+          "duration": 2809,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -114,7 +114,7 @@
     "marge": {
       "options": {
         "id": "default",
-        "reportDir": "cypress/results/json",
+        "reportDir": "cypress/reports/mocha",
         "overwrite": false,
         "html": false,
         "json": true

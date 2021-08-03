@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2021-08-03T10:21:51.438Z",
-    "end": "2021-08-03T10:21:54.773Z",
-    "duration": 3335,
+    "start": "2021-08-03T14:04:26.773Z",
+    "end": "2021-08-03T14:04:29.589Z",
+    "duration": 2816,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "b3aa2b50-6c85-4ca4-b1d4-5a5ac671e646",
+      "uuid": "86b4de28-546e-4b51-b67c-1616da12a4e7",
       "title": "",
       "fullFile": "cypress/integration/2-advanced-examples/window.spec.js",
       "file": "cypress/integration/2-advanced-examples/window.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "d7500c57-83cf-49d1-9613-84c47cdfa8ef",
+          "uuid": "03fb3df5-0d1b-4872-a0af-2dd6f3147828",
           "title": "Window",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "cy.window() - get the global window object",
               "fullTitle": "Window cy.window() - get the global window object",
               "timedOut": null,
-              "duration": 571,
+              "duration": 573,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": "\"videos/2-advanced-examples/window.spec.js.mp4\"",
               "code": "// https://on.cypress.io/window\ncy.window().should('have.property', 'top');",
               "err": {},
-              "uuid": "7c1cb901-736d-4a5d-b0a1-c88d2cbe625d",
-              "parentUUID": "d7500c57-83cf-49d1-9613-84c47cdfa8ef",
+              "uuid": "b19ed259-b0a8-40a3-a264-df2189d3b736",
+              "parentUUID": "03fb3df5-0d1b-4872-a0af-2dd6f3147828",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "cy.document() - get the document object",
               "fullTitle": "Window cy.document() - get the document object",
               "timedOut": null,
-              "duration": 263,
+              "duration": 278,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": "\"videos/2-advanced-examples/window.spec.js.mp4\"",
               "code": "// https://on.cypress.io/document\ncy.document().should('have.property', 'charset').and('eq', 'UTF-8');",
               "err": {},
-              "uuid": "b101a617-9b00-4881-aa96-b70f30093ce8",
-              "parentUUID": "d7500c57-83cf-49d1-9613-84c47cdfa8ef",
+              "uuid": "49324af0-2eb6-48dc-853e-182ffa149ec4",
+              "parentUUID": "03fb3df5-0d1b-4872-a0af-2dd6f3147828",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "cy.title() - get the title",
               "fullTitle": "Window cy.title() - get the title",
               "timedOut": null,
-              "duration": 245,
+              "duration": 198,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": "\"videos/2-advanced-examples/window.spec.js.mp4\"",
               "code": "// https://on.cypress.io/title\ncy.title().should('include', 'Kitchen Sink');",
               "err": {},
-              "uuid": "fa37cd21-2f4f-43f6-8044-95bf1ba43a82",
-              "parentUUID": "d7500c57-83cf-49d1-9613-84c47cdfa8ef",
+              "uuid": "3c6f3ca2-002b-42b0-93f1-0a6d31522a2d",
+              "parentUUID": "03fb3df5-0d1b-4872-a0af-2dd6f3147828",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "7c1cb901-736d-4a5d-b0a1-c88d2cbe625d",
-            "b101a617-9b00-4881-aa96-b70f30093ce8",
-            "fa37cd21-2f4f-43f6-8044-95bf1ba43a82"
+            "b19ed259-b0a8-40a3-a264-df2189d3b736",
+            "49324af0-2eb6-48dc-853e-182ffa149ec4",
+            "3c6f3ca2-002b-42b0-93f1-0a6d31522a2d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1079,
+          "duration": 1049,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -133,7 +133,7 @@
     "marge": {
       "options": {
         "id": "default",
-        "reportDir": "cypress/results/json",
+        "reportDir": "cypress/reports/mocha",
         "overwrite": false,
         "html": false,
         "json": true

@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2021-08-03T10:20:03.368Z",
-    "end": "2021-08-03T10:20:09.624Z",
-    "duration": 6256,
+    "start": "2021-08-03T14:02:40.117Z",
+    "end": "2021-08-03T14:02:46.348Z",
+    "duration": 6231,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "980294aa-7952-472c-bbdf-3c45f86c6517",
+      "uuid": "82b02cc3-0d66-4b4f-a5ba-340b92c543da",
       "title": "",
       "fullFile": "cypress/integration/2-advanced-examples/navigation.spec.js",
       "file": "cypress/integration/2-advanced-examples/navigation.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "d0e42e04-df53-49b8-a831-27c4e904611c",
+          "uuid": "e2b66948-364d-477a-9108-27439a9cc158",
           "title": "Navigation",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "cy.go() - go back or forward in the browser's history",
               "fullTitle": "Navigation cy.go() - go back or forward in the browser's history",
               "timedOut": null,
-              "duration": 2203,
+              "duration": 2016,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": "\"videos/2-advanced-examples/navigation.spec.js.mp4\"",
               "code": "// https://on.cypress.io/go\ncy.location('pathname').should('include', 'navigation');\ncy.go('back');\ncy.location('pathname').should('not.include', 'navigation');\ncy.go('forward');\ncy.location('pathname').should('include', 'navigation'); // clicking back\ncy.go(-1);\ncy.location('pathname').should('not.include', 'navigation'); // clicking forward\ncy.go(1);\ncy.location('pathname').should('include', 'navigation');",
               "err": {},
-              "uuid": "d9f57bc2-8895-45be-9973-a34165f32382",
-              "parentUUID": "d0e42e04-df53-49b8-a831-27c4e904611c",
+              "uuid": "b49cf3ac-3476-45b8-a2a8-e0ca46c93bce",
+              "parentUUID": "e2b66948-364d-477a-9108-27439a9cc158",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "cy.reload() - reload the page",
               "fullTitle": "Navigation cy.reload() - reload the page",
               "timedOut": null,
-              "duration": 1075,
+              "duration": 1029,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": "\"videos/2-advanced-examples/navigation.spec.js.mp4\"",
               "code": "// https://on.cypress.io/reload\ncy.reload(); // reload the page without using the cache\ncy.reload(true);",
               "err": {},
-              "uuid": "75143360-3b67-4710-a684-5a582fe93a32",
-              "parentUUID": "d0e42e04-df53-49b8-a831-27c4e904611c",
+              "uuid": "fce6d23e-08c6-4103-af37-ea57d32918bc",
+              "parentUUID": "e2b66948-364d-477a-9108-27439a9cc158",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "cy.visit() - visit a remote url",
               "fullTitle": "Navigation cy.visit() - visit a remote url",
               "timedOut": null,
-              "duration": 906,
+              "duration": 910,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": "\"videos/2-advanced-examples/navigation.spec.js.mp4\"",
               "code": "// https://on.cypress.io/visit\n// Visit any sub-domain of your current domain\n// Pass options to the visit\ncy.visit('https://example.cypress.io/commands/navigation', {\n  timeout: 50000,\n  // increase total time for the visit to resolve\n  onBeforeLoad(contentWindow) {\n    // contentWindow is the remote page's window object\n    expect(typeof contentWindow === 'object').to.be.true;\n  },\n  onLoad(contentWindow) {\n    // contentWindow is the remote page's window object\n    expect(typeof contentWindow === 'object').to.be.true;\n  }\n});",
               "err": {},
-              "uuid": "e07ce2d8-4a10-4321-b116-57bd792586ce",
-              "parentUUID": "d0e42e04-df53-49b8-a831-27c4e904611c",
+              "uuid": "e39b1246-fa8e-43c3-8cf9-a45cd2423e1c",
+              "parentUUID": "e2b66948-364d-477a-9108-27439a9cc158",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "d9f57bc2-8895-45be-9973-a34165f32382",
-            "75143360-3b67-4710-a684-5a582fe93a32",
-            "e07ce2d8-4a10-4321-b116-57bd792586ce"
+            "b49cf3ac-3476-45b8-a2a8-e0ca46c93bce",
+            "fce6d23e-08c6-4103-af37-ea57d32918bc",
+            "e39b1246-fa8e-43c3-8cf9-a45cd2423e1c"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4184,
+          "duration": 3955,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -133,7 +133,7 @@
     "marge": {
       "options": {
         "id": "default",
-        "reportDir": "cypress/results/json",
+        "reportDir": "cypress/reports/mocha",
         "overwrite": false,
         "html": false,
         "json": true

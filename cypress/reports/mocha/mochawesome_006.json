@@ -5,9 +5,9 @@
     "passes": 12,
     "pending": 0,
     "failures": 0,
-    "start": "2021-08-03T10:19:10.155Z",
-    "end": "2021-08-03T10:19:16.261Z",
-    "duration": 6106,
+    "start": "2021-08-03T14:01:41.324Z",
+    "end": "2021-08-03T14:01:47.578Z",
+    "duration": 6254,
     "testsRegistered": 12,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "df7fe4cc-4e5b-464c-97ab-bfaf8c9d143a",
+      "uuid": "2ecbc2ab-8616-4e1d-8277-619ab28c6f85",
       "title": "",
       "fullFile": "cypress/integration/2-advanced-examples/cypress_api.spec.js",
       "file": "cypress/integration/2-advanced-examples/cypress_api.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c35fc0eb-e0eb-442a-8c40-75fd3555b1a8",
+          "uuid": "ccccfdb6-63a8-488b-b639-ff1488f6e5d7",
           "title": "Cypress.Commands",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": ".add() - create a custom command",
               "fullTitle": "Cypress.Commands .add() - create a custom command",
               "timedOut": null,
-              "duration": 818,
+              "duration": 678,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,26 +47,26 @@
               "context": "\"videos/2-advanced-examples/cypress_api.spec.js.mp4\"",
               "code": "Cypress.Commands.add('console', {\n  prevSubject: true\n}, (subject, method) => {\n  // the previous subject is automatically received\n  // and the commands arguments are shifted\n  // allow us to change the console method used\n  method = method || 'log'; // log the subject to the console\n  // @ts-ignore TS7017\n  console[method]('The subject is', subject); // whatever we return becomes the new subject\n  // we don't want to change the subject so\n  // we return whatever was passed in\n  return subject;\n}); // @ts-ignore TS2339\ncy.get('button').console('info').then($button => {// subject is still $button\n});",
               "err": {},
-              "uuid": "9e41a5a3-a695-4a53-9eeb-48a6b3adf0c5",
-              "parentUUID": "c35fc0eb-e0eb-442a-8c40-75fd3555b1a8",
+              "uuid": "d6e2b1a0-ec0a-4663-b862-9cb4e5058a21",
+              "parentUUID": "ccccfdb6-63a8-488b-b639-ff1488f6e5d7",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9e41a5a3-a695-4a53-9eeb-48a6b3adf0c5"
+            "d6e2b1a0-ec0a-4663-b862-9cb4e5058a21"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 818,
+          "duration": 678,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "97772ede-fa56-4cb1-9c7b-6993fcaa3244",
+          "uuid": "e65718b5-a009-4602-889d-26f3a52d79ec",
           "title": "Cypress.Cookies",
           "fullFile": "",
           "file": "",
@@ -77,7 +77,7 @@
               "title": ".debug() - enable or disable debugging",
               "fullTitle": "Cypress.Cookies .debug() - enable or disable debugging",
               "timedOut": null,
-              "duration": 360,
+              "duration": 333,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -86,8 +86,8 @@
               "context": "\"videos/2-advanced-examples/cypress_api.spec.js.mp4\"",
               "code": "Cypress.Cookies.debug(true); // Cypress will now log in the console when\n// cookies are set or cleared\ncy.setCookie('fakeCookie', '123ABC');\ncy.clearCookie('fakeCookie');\ncy.setCookie('fakeCookie', '123ABC');\ncy.clearCookie('fakeCookie');\ncy.setCookie('fakeCookie', '123ABC');",
               "err": {},
-              "uuid": "00417725-bdd9-40f3-969b-adbd768716cd",
-              "parentUUID": "97772ede-fa56-4cb1-9c7b-6993fcaa3244",
+              "uuid": "b330f415-ff98-4e9a-beed-f33fd5a673db",
+              "parentUUID": "e65718b5-a009-4602-889d-26f3a52d79ec",
               "isHook": false,
               "skipped": false
             },
@@ -95,7 +95,7 @@
               "title": ".preserveOnce() - preserve cookies by key",
               "fullTitle": "Cypress.Cookies .preserveOnce() - preserve cookies by key",
               "timedOut": null,
-              "duration": 238,
+              "duration": 356,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -104,8 +104,8 @@
               "context": "\"videos/2-advanced-examples/cypress_api.spec.js.mp4\"",
               "code": "// normally cookies are reset after each test\ncy.getCookie('fakeCookie').should('not.be.ok'); // preserving a cookie will not clear it when\n// the next test starts\ncy.setCookie('lastCookie', '789XYZ');\nCypress.Cookies.preserveOnce('lastCookie');",
               "err": {},
-              "uuid": "ccd7441a-8b91-4fd0-97c7-9c883f54422c",
-              "parentUUID": "97772ede-fa56-4cb1-9c7b-6993fcaa3244",
+              "uuid": "1ff56022-e8ba-4448-b3f7-53a4d10e7327",
+              "parentUUID": "e65718b5-a009-4602-889d-26f3a52d79ec",
               "isHook": false,
               "skipped": false
             },
@@ -113,7 +113,7 @@
               "title": ".defaults() - set defaults for all cookies",
               "fullTitle": "Cypress.Cookies .defaults() - set defaults for all cookies",
               "timedOut": null,
-              "duration": 247,
+              "duration": 287,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -122,28 +122,28 @@
               "context": "\"videos/2-advanced-examples/cypress_api.spec.js.mp4\"",
               "code": "// now any cookie with the name 'session_id' will\n// not be cleared before each new test runs\nCypress.Cookies.defaults({\n  preserve: 'session_id'\n});",
               "err": {},
-              "uuid": "a8ac2b9b-1968-4afe-b0af-59be15ce0abf",
-              "parentUUID": "97772ede-fa56-4cb1-9c7b-6993fcaa3244",
+              "uuid": "b7237afc-6916-45de-8a62-5cbf81fbbfb5",
+              "parentUUID": "e65718b5-a009-4602-889d-26f3a52d79ec",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "00417725-bdd9-40f3-969b-adbd768716cd",
-            "ccd7441a-8b91-4fd0-97c7-9c883f54422c",
-            "a8ac2b9b-1968-4afe-b0af-59be15ce0abf"
+            "b330f415-ff98-4e9a-beed-f33fd5a673db",
+            "1ff56022-e8ba-4448-b3f7-53a4d10e7327",
+            "b7237afc-6916-45de-8a62-5cbf81fbbfb5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 845,
+          "duration": 976,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "2cf7146e-67cd-4110-830f-89989793f234",
+          "uuid": "979d2065-b71b-44b5-a0b7-aa68b8a77560",
           "title": "Cypress.arch",
           "fullFile": "",
           "file": "",
@@ -154,7 +154,7 @@
               "title": "Get CPU architecture name of underlying OS",
               "fullTitle": "Cypress.arch Get CPU architecture name of underlying OS",
               "timedOut": null,
-              "duration": 273,
+              "duration": 266,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -163,26 +163,26 @@
               "context": "\"videos/2-advanced-examples/cypress_api.spec.js.mp4\"",
               "code": "// https://on.cypress.io/arch\nexpect(Cypress.arch).to.exist;",
               "err": {},
-              "uuid": "c4604fb4-88a7-4a76-a31e-60c2d4019e79",
-              "parentUUID": "2cf7146e-67cd-4110-830f-89989793f234",
+              "uuid": "fa03a550-0c29-4180-946e-68c28236865d",
+              "parentUUID": "979d2065-b71b-44b5-a0b7-aa68b8a77560",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c4604fb4-88a7-4a76-a31e-60c2d4019e79"
+            "fa03a550-0c29-4180-946e-68c28236865d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 273,
+          "duration": 266,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "2531c7fd-8eef-4bf8-9afa-11b7bb902f5b",
+          "uuid": "b6e80cd5-0567-44fe-8c25-188a61f60fa1",
           "title": "Cypress.config()",
           "fullFile": "",
           "file": "",
@@ -193,7 +193,7 @@
               "title": "Get and set configuration options",
               "fullTitle": "Cypress.config() Get and set configuration options",
               "timedOut": null,
-              "duration": 241,
+              "duration": 379,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -202,26 +202,26 @@
               "context": "\"videos/2-advanced-examples/cypress_api.spec.js.mp4\"",
               "code": "// https://on.cypress.io/config\nlet myConfig = Cypress.config();\nexpect(myConfig).to.have.property('animationDistanceThreshold', 5);\nexpect(myConfig).to.have.property('baseUrl', null);\nexpect(myConfig).to.have.property('defaultCommandTimeout', 4000);\nexpect(myConfig).to.have.property('requestTimeout', 5000);\nexpect(myConfig).to.have.property('responseTimeout', 30000);\nexpect(myConfig).to.have.property('viewportHeight', 660);\nexpect(myConfig).to.have.property('viewportWidth', 1000);\nexpect(myConfig).to.have.property('pageLoadTimeout', 60000);\nexpect(myConfig).to.have.property('waitForAnimations', true);\nexpect(Cypress.config('pageLoadTimeout')).to.eq(60000); // this will change the config for the rest of your tests!\nCypress.config('pageLoadTimeout', 20000);\nexpect(Cypress.config('pageLoadTimeout')).to.eq(20000);\nCypress.config('pageLoadTimeout', 60000);",
               "err": {},
-              "uuid": "75512454-740e-4201-bf9a-0c2edd733946",
-              "parentUUID": "2531c7fd-8eef-4bf8-9afa-11b7bb902f5b",
+              "uuid": "98c224ca-19f7-45a0-89cb-d23b5d2ec62b",
+              "parentUUID": "b6e80cd5-0567-44fe-8c25-188a61f60fa1",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "75512454-740e-4201-bf9a-0c2edd733946"
+            "98c224ca-19f7-45a0-89cb-d23b5d2ec62b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 241,
+          "duration": 379,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "6a69b37c-a991-484a-94dd-b3366f752681",
+          "uuid": "6f89c176-40aa-4f7c-bfba-9048d5de700e",
           "title": "Cypress.dom",
           "fullFile": "",
           "file": "",
@@ -232,7 +232,7 @@
               "title": ".isHidden() - determine if a DOM element is hidden",
               "fullTitle": "Cypress.dom .isHidden() - determine if a DOM element is hidden",
               "timedOut": null,
-              "duration": 271,
+              "duration": 255,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -241,26 +241,26 @@
               "context": "\"videos/2-advanced-examples/cypress_api.spec.js.mp4\"",
               "code": "let hiddenP = Cypress.$('.dom-p p.hidden').get(0);\nlet visibleP = Cypress.$('.dom-p p.visible').get(0); // our first paragraph has css class 'hidden'\nexpect(Cypress.dom.isHidden(hiddenP)).to.be.true;\nexpect(Cypress.dom.isHidden(visibleP)).to.be.false;",
               "err": {},
-              "uuid": "43ff1dc5-8f25-4375-82c8-021086ea66df",
-              "parentUUID": "6a69b37c-a991-484a-94dd-b3366f752681",
+              "uuid": "e4331183-d9e8-41eb-8d9c-eee23e39d86c",
+              "parentUUID": "6f89c176-40aa-4f7c-bfba-9048d5de700e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "43ff1dc5-8f25-4375-82c8-021086ea66df"
+            "e4331183-d9e8-41eb-8d9c-eee23e39d86c"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 271,
+          "duration": 255,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "0e37a205-58ef-4524-a5bc-b19a89d61e42",
+          "uuid": "ba862651-6f7b-4dc1-a035-4d007dc1209c",
           "title": "Cypress.env()",
           "fullFile": "",
           "file": "",
@@ -271,7 +271,7 @@
               "title": "Get environment variables",
               "fullTitle": "Cypress.env() Get environment variables",
               "timedOut": null,
-              "duration": 305,
+              "duration": 243,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -280,26 +280,26 @@
               "context": "\"videos/2-advanced-examples/cypress_api.spec.js.mp4\"",
               "code": "// https://on.cypress.io/env\n// set multiple environment variables\nCypress.env({\n  host: 'veronica.dev.local',\n  api_server: 'http://localhost:8888/v1/'\n}); // get environment variable\nexpect(Cypress.env('host')).to.eq('veronica.dev.local'); // set environment variable\nCypress.env('api_server', 'http://localhost:8888/v2/');\nexpect(Cypress.env('api_server')).to.eq('http://localhost:8888/v2/'); // get all environment variable\nexpect(Cypress.env()).to.have.property('host', 'veronica.dev.local');\nexpect(Cypress.env()).to.have.property('api_server', 'http://localhost:8888/v2/');",
               "err": {},
-              "uuid": "6a3903e8-78b5-439b-990a-2f44cef15689",
-              "parentUUID": "0e37a205-58ef-4524-a5bc-b19a89d61e42",
+              "uuid": "59eb9835-302b-47a2-9be8-bed1c3556723",
+              "parentUUID": "ba862651-6f7b-4dc1-a035-4d007dc1209c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "6a3903e8-78b5-439b-990a-2f44cef15689"
+            "59eb9835-302b-47a2-9be8-bed1c3556723"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 305,
+          "duration": 243,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "51845067-1d70-4840-82e5-d042ea7b16c6",
+          "uuid": "a75d01b6-99a3-447c-9598-eaffcb074761",
           "title": "Cypress.log",
           "fullFile": "",
           "file": "",
@@ -310,7 +310,7 @@
               "title": "Control what is printed to the Command Log",
               "fullTitle": "Cypress.log Control what is printed to the Command Log",
               "timedOut": null,
-              "duration": 187,
+              "duration": 221,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -319,26 +319,26 @@
               "context": "\"videos/2-advanced-examples/cypress_api.spec.js.mp4\"",
               "code": "// https://on.cypress.io/cypress-log",
               "err": {},
-              "uuid": "abe5811a-f277-41f3-be7d-40db5e9937d9",
-              "parentUUID": "51845067-1d70-4840-82e5-d042ea7b16c6",
+              "uuid": "a5e047f1-433c-4d18-89c4-3ad67f01c59b",
+              "parentUUID": "a75d01b6-99a3-447c-9598-eaffcb074761",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "abe5811a-f277-41f3-be7d-40db5e9937d9"
+            "a5e047f1-433c-4d18-89c4-3ad67f01c59b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 187,
+          "duration": 221,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "ea260baa-23e9-4dbb-ac38-e11716bbb451",
+          "uuid": "f4cdf44c-a3d9-4172-8ff7-f51b26a52838",
           "title": "Cypress.platform",
           "fullFile": "",
           "file": "",
@@ -349,7 +349,7 @@
               "title": "Get underlying OS name",
               "fullTitle": "Cypress.platform Get underlying OS name",
               "timedOut": null,
-              "duration": 262,
+              "duration": 251,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -358,26 +358,26 @@
               "context": "\"videos/2-advanced-examples/cypress_api.spec.js.mp4\"",
               "code": "// https://on.cypress.io/platform\nexpect(Cypress.platform).to.be.exist;",
               "err": {},
-              "uuid": "ee502970-a609-4b03-9974-71cc7e2bc5da",
-              "parentUUID": "ea260baa-23e9-4dbb-ac38-e11716bbb451",
+              "uuid": "e52e6101-29ce-47e7-ab8e-9dea3a6e3653",
+              "parentUUID": "f4cdf44c-a3d9-4172-8ff7-f51b26a52838",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "ee502970-a609-4b03-9974-71cc7e2bc5da"
+            "e52e6101-29ce-47e7-ab8e-9dea3a6e3653"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 262,
+          "duration": 251,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "3b61f9e3-202e-466c-8bd4-37e2362761d6",
+          "uuid": "dec59a85-5320-4bb8-8164-fec100de7de5",
           "title": "Cypress.version",
           "fullFile": "",
           "file": "",
@@ -388,7 +388,7 @@
               "title": "Get current version of Cypress being run",
               "fullTitle": "Cypress.version Get current version of Cypress being run",
               "timedOut": null,
-              "duration": 262,
+              "duration": 301,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -397,26 +397,26 @@
               "context": "\"videos/2-advanced-examples/cypress_api.spec.js.mp4\"",
               "code": "// https://on.cypress.io/version\nexpect(Cypress.version).to.be.exist;",
               "err": {},
-              "uuid": "9d3e8447-4644-4711-9554-a7ff77e8af31",
-              "parentUUID": "3b61f9e3-202e-466c-8bd4-37e2362761d6",
+              "uuid": "c4672f57-f7b2-489e-b461-c6c91bb9354d",
+              "parentUUID": "dec59a85-5320-4bb8-8164-fec100de7de5",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9d3e8447-4644-4711-9554-a7ff77e8af31"
+            "c4672f57-f7b2-489e-b461-c6c91bb9354d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 262,
+          "duration": 301,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "d50bd77b-036b-462d-b033-c6ee9a898029",
+          "uuid": "aac9bfee-dd54-420b-9dfc-e1a420ca5cd6",
           "title": "Cypress.spec",
           "fullFile": "",
           "file": "",
@@ -427,7 +427,7 @@
               "title": "Get current spec information",
               "fullTitle": "Cypress.spec Get current spec information",
               "timedOut": null,
-              "duration": 293,
+              "duration": 277,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -436,20 +436,20 @@
               "context": "\"videos/2-advanced-examples/cypress_api.spec.js.mp4\"",
               "code": "// https://on.cypress.io/spec\n// wrap the object so we can inspect it easily by clicking in the command log\ncy.wrap(Cypress.spec).should('include.keys', ['name', 'relative', 'absolute']);",
               "err": {},
-              "uuid": "1f1bad4b-249c-4371-9ea5-77a2fb2957c3",
-              "parentUUID": "d50bd77b-036b-462d-b033-c6ee9a898029",
+              "uuid": "6dd73e12-82ff-4366-b1b6-f49918365331",
+              "parentUUID": "aac9bfee-dd54-420b-9dfc-e1a420ca5cd6",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "1f1bad4b-249c-4371-9ea5-77a2fb2957c3"
+            "6dd73e12-82ff-4366-b1b6-f49918365331"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 293,
+          "duration": 277,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -484,7 +484,7 @@
     "marge": {
       "options": {
         "id": "default",
-        "reportDir": "cypress/results/json",
+        "reportDir": "cypress/reports/mocha",
         "overwrite": false,
         "html": false,
         "json": true
