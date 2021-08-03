@@ -4,7 +4,9 @@
   "description": "cypress automation with 8.1.0 version",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:chrome": "cypress run --browser chrome",
+    "report:merge": "mochawesome-merge cypress/results/json/*.json > index.json",
+    "report:generate": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,10 @@
   },
   "homepage": "https://github.com/Urmila487/cypress81withReport#readme",
   "devDependencies": {
-    "cypress": "^8.1.0"
+    "cypress": "^8.1.0",
+    "cypress-multi-reporters": "^1.5.0",
+    "mocha": "^9.0.3",
+    "mochawesome": "^6.2.2",
+    "mochawesome-report-generator": "^5.2.0"
   }
 }
