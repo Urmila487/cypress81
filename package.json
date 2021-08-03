@@ -16,7 +16,7 @@
     "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
     "posttest": "npm run combine-reports && npm run generate-report",
     "test": "npm run scripts || npm run posttest",
-    "report:merge": "mochawesome-merge cypress/results/json/*.json > index.json",
+    "report:merge": "mochawesome-merge cypress/reports/mocha/*.json > index.json",
     "report:generate": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
   },
   "repository": {
