@@ -22,6 +22,7 @@ import './commands'
 
 import addContext from 'mochawesome/addContext'
 
+require('cypress-xpath')
 
 Cypress.on("test:after:run", (test, runnable) => {
     

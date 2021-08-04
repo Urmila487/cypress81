@@ -62,6 +62,13 @@ context('Actions', () => {
 
     cy.get('.action-form').submit()
       .next().should('contain', 'Your form has been submitted!')
+    /* ==== Generated with Cypress Studio ==== */
+    cy.get('#couponCode1').clear();
+    cy.get('#couponCode1').type('code');
+    cy.get('.action-form > .btn').click();
+    cy.get(':nth-child(14) > .well > :nth-child(3)').click();
+    cy.get(':nth-child(14) > .well > :nth-child(2)').should('have.text', 'Your form has been submitted!');
+    /* ==== End Cypress Studio ==== */
   })
 
   it('.click() - click on a DOM element', () => {
